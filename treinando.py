@@ -8,7 +8,8 @@ db = mysql.connector.connect(
     host= "mysql-5e358e5-henricaua18-0424.k.aivencloud.com",
     user = "avnadmin",
     password = 'AVNS_6zJohm7nIe9u_7o21HU',
-    database = 'defaultdb'
+    database = 'defaultdb',
+    port ='11991'
 )
 cursor = db.cursor()
 
