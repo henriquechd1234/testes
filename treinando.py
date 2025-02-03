@@ -5,10 +5,10 @@ app = Flask(__name__)
 
 
 db = mysql.connector.connect(
-    host= "localhost",
-    user = "root",
-    password = 'Henr!quecastro01',
-    database = 'avaliacoe_dos_filmes'
+    host= "mysql-5e358e5-henricaua18-0424.k.aivencloud.com",
+    user = "avnadmin",
+    password = 'AVNS_6zJohm7nIe9u_7o21HU',
+    database = 'defaultdb'
 )
 cursor = db.cursor()
 
@@ -20,7 +20,7 @@ def home():
 @app.route("/salvar", methods=["POST"])
 def salvar(): 
     nome = request.form["nome"]
-    cursor.execute("INSERT INTO testes (nome) VALUES (%s)", (nome,))
+    cursor.execute("INSERT INTO teste (nome) VALUES (%s)", (nome,))
     db.commit()
     return redirect('/') 
 
