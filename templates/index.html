@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           #nao {
+            position: absolute; /* Permite mover o botão livremente */
+            top: 1000px; /* Posição inicial */
+            left: 10000px; /* Posição inicial */
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>alguma coisa</h1>
+    <h1>Sim</h1>
+    <button id="nao">Não</button>
+
+</body>
+    <script>
+        var botao = document.getElementById("nao");
+
+        botao.addEventListener("click", function(){
+            var novaTop = Math.random() * (window.innerHeight - botao.offsetHeight);
+            var novaLeft = Math.random() * (window.innerWidth - botao.offsetWidth);
+            botao.style.top = novaTop + "px";
+            botao.style.left = novaLeft + "px";
+        });
+
+       
+    </script>
+</html>
